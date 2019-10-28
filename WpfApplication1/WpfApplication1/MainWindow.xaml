@@ -1,0 +1,159 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Loaded="Window_Loaded" Icon="icon/window_logo.png">
+    <Window.Background>
+        <ImageBrush ImageSource="backgrounds/01_arkaplan.jpg"/>
+    </Window.Background>
+
+    <Grid x:Name="AnaGrd">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--(0,0)-->
+        <Border Height="450" Background="#FFF7F7F7" CornerRadius="7" Margin="60,134,49,136">
+            <Border.Effect>
+                <DropShadowEffect Direction="300" ShadowDepth="2"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="375"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" Height="126" VerticalAlignment="Top" Margin="5,5,5,0" CornerRadius="7" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <ImageBrush ImageSource="icon/02_logo.png"/>
+                    </Border.Background>
+                </Border>
+                <Border Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Content="Hoş Geldiniz" Foreground="#FFBDBDBD" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" FontFamily="Khmer UI"/>
+                </Border>
+                <Border Grid.Row="2"  Background="#FF294E95" CornerRadius="7,7,0,0" Margin="45,10,45,0" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
+                    <!--Panel yazısı-->
+                    <Label Content="PANEL" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontFamily="Yu Gothic"/>
+                </Border>
+                <Border Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,162" x:Name="menubtn_grd">
+                    <!--menu butonları-->
+                    <StackPanel>
+                        <Button Style="{DynamicResource MenuButonlar}" Height="45" Width="215" x:Name="Menubuton_KitapTeslimi" Click="Menubuton_KitapTeslimi_Click">
+                            <DockPanel Width="150" Margin="30,0,0,0">
+                                <Label Content="Kitap Teslimi" Style="{DynamicResource btn_ad}" Width="113"/>
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MenuButonlar}" Height="45" Width="215"  x:Name="Menubuton_kitaplar" Click="Menubuton_kitaplar_Click">
+                            <DockPanel Width="150" Margin="30,0,0,0">
+                                <Label Content="Kitaplar"  Style="{DynamicResource btn_ad}" Width="113"/>
+                            </DockPanel>
+                        </Button>
+                        <!--<Button Height="50"  Click="Button_Click" x:Name="btn_kitapekle">
+                            <DockPanel Width="200" Margin="30,0,0,0" >                              
+                                <Label Content="Kitap Ekle" FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold"  Width="143"/>                               
+                            </DockPanel>
+                        </Button>-->
+                        <!--<Button  Height="50" >
+                            <DockPanel Width="200" Margin="30,0,0,0">                              
+                                <Label Content="Kitap Sil"  FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold"  Width="143"/>                               
+                            </DockPanel>
+                        </Button>-->
+                        <!--<Button  Height="50">
+                            <DockPanel Width="200" Margin="30,0,0,0">                               
+                                <Label Content="Kitap Güncelle" FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold"  Width="143"/>                              
+                            </DockPanel>
+                        </Button>-->
+                        <Button Style="{DynamicResource MenuButonlar}" Height="45" Width="215"  >
+                            <DockPanel Width="150" Margin="30,0,0,0">
+                                <Label Content="Okuyucular" Style="{DynamicResource btn_ad}" Width="113"/>
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource MenuButonlar}"  Height="45" Width="215" >
+                            <DockPanel Width="150" Margin="30,0,0,0">
+                                <Label Content="Yönetim"  Style="{DynamicResource btn_ad}" Width="113"/>
+                            </DockPanel>
+                        </Button>
+                        <!--<Button  Height="50">
+                            <DockPanel Width="200" Margin="30,0,0,0">                              
+                                <Label Content="Okuyucu Ekle"  FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold" Width="143"/>                              
+                            </DockPanel>
+                        </Button>-->
+                        <!--<Button  Height="50" >
+                            <DockPanel Width="200" Margin="30,0,0,0">                               
+                                <Label Content="Okuyucu Sil"  FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold" Width="143"/>                                
+                            </DockPanel>
+                        </Button>
+                        <Button  Height="50" >
+                            <DockPanel Width="200" Margin="30,0,0,0">                              
+                                <Label Content="Okuyucu Güncelle"  FontFamily="Sitka Banner" FontSize="18" Foreground="#FF6D6D6F" FontWeight="Bold" Width="143"/>                               
+                            </DockPanel>
+                        </Button>-->
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+
+        </Border>
+
+        <!--(0,1)-->
+        <Border Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush/>
+                </Grid.Background>
+                <!-- Mini Butonlar-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="690"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0">
+                    <Grid x:Name="MiniBtnGrd">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="42"/>
+                            <ColumnDefinition Width="42"/>
+                            <ColumnDefinition Width="42"/>
+                            <ColumnDefinition Width="42"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0">
+                        </Border>
+                        <Border Grid.Column="1">
+                        </Border>
+                        <Border Grid.Column="2">
+                            <Button Content="?" x:Name="Btn_hakkinda" Style="{DynamicResource MiniButonlar}"  Width="Auto" Click="Btn_hakkinda_Click"/>
+                        </Border>
+                        <Border Grid.Column="3">
+                            <Button Content="-" x:Name="Btn_simge" Style="{DynamicResource MiniButonlar}"  Width="Auto" FontWeight="Bold" Click="Btn_simge_Click"/>
+                        </Border>
+                        <Border Grid.Column="4">
+                            <Button Content="□" x:Name="Btn_boyut" Style="{DynamicResource MiniButonlar}"  Width="Auto" FontWeight="Bold" Click="Btn_boyut_Click"/>
+                        </Border>
+                        <Border Grid.Column="5">
+                            <Button Content="x" x:Name="Btn_kpt" Style="{DynamicResource MiniButonlar}"  Width="Auto" Click="Btn_kpt_Click"/>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1"  Margin="10,0,60,34" CornerRadius="7,7,7,7" x:Name="grd_harita" Grid.IsSharedSizeScope="True" >
+                    <Border.Background>
+                        <ImageBrush ImageSource="Backgrounds/04_harita.png"/>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="2" Direction="300"/>
+                    </Border.Effect>
+                    <Grid x:Name="icerik">
+                        
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
